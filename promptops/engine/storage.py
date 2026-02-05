@@ -1,0 +1,47 @@
+import json
+import os
+from typing import Dict, List, Optional
+import glob
+
+class Storage:
+    """Handles persistence of results and other data."""
+    
+    def __init__(self, results_dir: str = "promptops/results"):
+        self.results_dir = results_dir
+        if not os.path.exists(self.results_dir):
+            os.makedirs(self.results_dir)
+            
+    def save_run(self, run_data: Dict) -> str:
+        """Saves a run result to a JSON file. Returns the filename."""
+        timestamp = run_data.get("timestamp", "").replace(":", "-").replace(".", "-")
+        filename = f"run_{timestamp}.json"
+        path = os.path.join(self.results_dir, filename)
+        
+        try:
+            with open(path, "w", encoding="utf-8") as f:
+                json.dump(run_data, f, indent=2)
+            return filename
+        except Exception as e:
+            print(f"Error saving run: {e}")
+            return ""
+
+    def load_run(self, filename: str) -> Optional[Dict]:
+        """Loads a run result from a JSON file."""
+        path = os.path.join(self.results_dir, filename)
+        if not os.path.exists(path):
+            return None
+            
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception as e:
+            print(f"Error loading run {filename}: {e}")
+            return None
+
+    def list_runs(self) -> List[str]:
+        """Lists all run files."""
+        # Simple glob to find json files
+        files = glob.glob(os.path.join(self.results_dir, "*.json"))
+        # Return just filenames, sorted by modification time (newest first)
+        files.sort(key=os.path.getmtime, reverse=True)
+        return [os.path.basename(f) for f in files]
