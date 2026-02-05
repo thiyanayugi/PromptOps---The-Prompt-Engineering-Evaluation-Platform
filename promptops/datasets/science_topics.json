@@ -1,0 +1,32 @@
+[
+    {
+        "id": "case1",
+        "topic": "gravity",
+        "age": 10,
+        "max_words": 60
+    },
+    {
+        "id": "case2",
+        "topic": "photosynthesis",
+        "age": 8,
+        "max_words": 50
+    },
+    {
+        "id": "case3",
+        "topic": "black holes",
+        "age": 12,
+        "max_words": 100
+    },
+    {
+        "id": "case4",
+        "topic": "bacteria",
+        "age": 10,
+        "max_words": 60
+    },
+    {
+        "id": "case5",
+        "topic": "quantum entanglement",
+        "age": 14,
+        "max_words": 150
+    }
+]

@@ -1,0 +1,7 @@
+{
+    "version": "v1",
+    "name": "Simple Science Explainer",
+    "description": "Explains science topics for kids",
+    "system_prompt": "You are a friendly science tutor for children.",
+    "user_template": "Explain {topic} to a {age} year old in under {max_words} words."
+}

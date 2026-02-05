@@ -1,0 +1,32 @@
+from typing import Dict, Any, List
+from .judge import Judge
+
+class Evaluator:
+    """Orchestrates evaluation of run results."""
+    
+    def __init__(self, judge: Judge):
+        self.judge = judge
+        
+    def evaluate_run(self, run_results: List[Dict]) -> List[Dict]:
+        """
+        Takes a list of raw run results and adds evaluation scores.
+        """
+        evaluated_results = []
+        for result in run_results:
+            output = result.get("output", "")
+            
+            # 1. Rule-based checks
+            word_count = len(output.split())
+            
+            # 2. LLM Judge
+            clarity_score, reasoning = self.judge.evaluate(output, criteria="clarity")
+            
+            # Update result with evals
+            result["evaluation"] = {
+                "word_count": word_count,
+                "clarity_score": clarity_score,
+                "reasoning": reasoning
+            }
+            evaluated_results.append(result)
+            
+        return evaluated_results
