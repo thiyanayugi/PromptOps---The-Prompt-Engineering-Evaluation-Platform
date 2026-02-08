@@ -38,11 +38,13 @@ def init_components():
 
 components = init_components()
 
+# Set up navigation sidebar with branding
 # Sidebar navigation
 st.sidebar.title("🧠 PromptOps")
 st.sidebar.markdown("*Prompt Engineering Evaluation Platform*")
 st.sidebar.markdown("---")
 
+# Main navigation menu
 page = st.sidebar.radio("Navigation", ["📝 Prompts", "▶ Run Evaluation", "📊 Results"])
 
 # ==================== PROMPTS PAGE ====================
