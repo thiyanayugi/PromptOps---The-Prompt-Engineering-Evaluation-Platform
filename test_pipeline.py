@@ -5,22 +5,24 @@ import json
 import sys
 import os
 
-# Add promptops to path
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'promptops'))
+# Add project root to path
+project_root = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, project_root)
 
-from engine.prompt_loader import PromptLoader
-from engine.prompt_compiler import PromptCompiler
-from engine.runner import Runner
-from engine.evaluator import Evaluator
-from engine.judge import Judge
-from engine.metrics import Metrics
-from engine.storage import Storage
-from llm.client import MockLLMClient
+from promptops.engine.prompt_loader import PromptLoader
+from promptops.engine.prompt_compiler import PromptCompiler
+from promptops.engine.runner import Runner
+from promptops.engine.evaluator import Evaluator
+from promptops.engine.judge import Judge
+from promptops.engine.metrics import Metrics
+from promptops.engine.storage import Storage
+from promptops.llm.client import MockLLMClient
 
 def test_pipeline():
     """Test the complete pipeline end-to-end."""
     print("🧪 Testing PromptOps Pipeline...\n")
     
+    # Set up all necessary components for testing
     # Initialize components
     print("1️⃣ Initializing components...")
     llm_client = MockLLMClient()
