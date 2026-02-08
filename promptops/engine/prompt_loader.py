@@ -19,6 +19,7 @@ class PromptLoader:
         # Check if prompts directory exists before listing
         if not os.path.exists(self.prompts_dir):
             return []
+        # Filter to only include JSON files
         return [f for f in os.listdir(self.prompts_dir) if f.endswith(".json")]
 
     def load_prompt(self, filename: str) -> Optional[Dict]:
