@@ -13,6 +13,7 @@ class Storage:
     
     def __init__(self, results_dir: str = "promptops/results"):
         self.results_dir = results_dir
+        # Ensure results directory exists on initialization
         if not os.path.exists(self.results_dir):
             os.makedirs(self.results_dir)
             
