@@ -24,6 +24,7 @@ class PromptLoader:
 
     def load_prompt(self, filename: str) -> Optional[Dict]:
         """Loads a specific prompt file."""
+        # Construct full file path
         path = os.path.join(self.prompts_dir, filename)
         # Validate file exists before attempting load
         if not os.path.exists(path):
