@@ -1,3 +1,9 @@
+"""
+Evaluation orchestration module for PromptOps.
+
+Coordinates the evaluation process including rule-based and LLM-based
+assessment of generated outputs.
+"""
 from typing import Dict, Any, List
 from .judge import Judge
 
