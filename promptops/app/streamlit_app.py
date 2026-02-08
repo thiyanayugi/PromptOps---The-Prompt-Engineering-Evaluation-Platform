@@ -23,6 +23,7 @@ st.set_page_config(
     layout="wide"
 )
 
+# Cache components for better performance across sessions
 # Initialize components
 @st.cache_resource
 def init_components():
