@@ -29,6 +29,7 @@ class Evaluator:
             # 2. LLM Judge
             clarity_score, reasoning = self.judge.evaluate(output, criteria="clarity")
             
+            # Build evaluation results dictionary
             # Update result with evals
             result["evaluation"] = {
                 "word_count": word_count,
