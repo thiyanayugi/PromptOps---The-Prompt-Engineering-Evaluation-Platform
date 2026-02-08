@@ -21,6 +21,7 @@ class Evaluator:
         for result in run_results:
             output = result.get("output", "")
             
+            # Calculate basic word count metric
             # 1. Rule-based checks
             word_count = len(output.split())
             
