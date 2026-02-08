@@ -25,6 +25,7 @@ class Evaluator:
             # 1. Rule-based checks
             word_count = len(output.split())
             
+            # Invoke LLM judge for quality assessment
             # 2. LLM Judge
             clarity_score, reasoning = self.judge.evaluate(output, criteria="clarity")
             
