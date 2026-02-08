@@ -19,6 +19,7 @@ class Storage:
             
     def save_run(self, run_data: Dict) -> str:
         """Saves a run result to a JSON file. Returns the filename."""
+        # Sanitize timestamp for safe filename
         timestamp = run_data.get("timestamp", "").replace(":", "-").replace(".", "-")
         filename = f"run_{timestamp}.json"
         path = os.path.join(self.results_dir, filename)
