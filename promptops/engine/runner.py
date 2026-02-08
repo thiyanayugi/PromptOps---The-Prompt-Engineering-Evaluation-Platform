@@ -43,6 +43,7 @@ class Runner:
             end_time = time.time()
             latency = end_time - start_time
             
+            # Collect run results for this test case
             # 3. Record Result
             results.append({
                 "case_id": case.get("id", "unknown"),
