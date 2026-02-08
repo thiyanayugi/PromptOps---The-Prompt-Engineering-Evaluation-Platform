@@ -1,3 +1,9 @@
+"""
+Execution runner module for PromptOps.
+
+Coordinates the execution of prompts against datasets including
+compilation, LLM invocation, and result collection.
+"""
 import time
 import datetime
 from typing import List, Dict, Any
