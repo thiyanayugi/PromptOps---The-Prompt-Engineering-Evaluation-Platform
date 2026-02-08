@@ -25,9 +25,11 @@ class PromptLoader:
     def load_prompt(self, filename: str) -> Optional[Dict]:
         """Loads a specific prompt file."""
         path = os.path.join(self.prompts_dir, filename)
+        # Validate file exists before attempting load
         if not os.path.exists(path):
             return None
             
+        # Handle JSON parsing with error recovery
         try:
             with open(path, "r", encoding="utf-8") as f:
                 return json.load(f)
