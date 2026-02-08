@@ -3,17 +3,19 @@ import json
 import os
 import sys
 
-# Add parent directory to path so we can import from engine
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+# Add parent directory to path
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '../..'))
+sys.path.insert(0, project_root)
 
-from engine.prompt_loader import PromptLoader
-from engine.runner import Runner
-from engine.evaluator import Evaluator
-from engine.judge import Judge
-from engine.metrics import Metrics
-from engine.storage import Storage
-from llm.client import MockLLMClient
+from promptops.engine.prompt_loader import PromptLoader
+from promptops.engine.runner import Runner
+from promptops.engine.evaluator import Evaluator
+from promptops.engine.judge import Judge
+from promptops.engine.metrics import Metrics
+from promptops.engine.storage import Storage
+from promptops.llm.client import MockLLMClient
 
+# Configure Streamlit page settings
 # Page config
 st.set_page_config(
     page_title="PromptOps",
