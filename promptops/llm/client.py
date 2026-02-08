@@ -1,3 +1,8 @@
+"""
+LLM client abstraction and mock implementation.
+
+Provides abstract interface for LLM interactions and a mock client for testing.
+"""
 import abc
 import time
 import random
