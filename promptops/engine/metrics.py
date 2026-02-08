@@ -1,3 +1,9 @@
+"""
+Metrics computation module for PromptOps evaluation results.
+
+This module provides utilities for aggregating and computing
+statistical metrics from evaluation runs.
+"""
 from typing import List, Dict, Any
 
 class Metrics:
