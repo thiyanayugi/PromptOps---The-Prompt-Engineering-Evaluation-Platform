@@ -23,6 +23,7 @@ class PromptCompiler:
         system_prompt = prompt_template.get("system_prompt", "")
         user_template = prompt_template.get("user_template", "")
         
+        # Use Python str.format() for template variable substitution
         # Basic python string formatting
         try:
             compiled_user_message = user_template.format(**dataset_row)
