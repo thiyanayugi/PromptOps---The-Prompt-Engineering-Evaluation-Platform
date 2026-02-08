@@ -1,3 +1,9 @@
+"""
+Module for loading and managing prompt versions from the filesystem.
+
+This module provides the PromptLoader class which handles reading
+and parsing JSON-based prompt configuration files.
+"""
 import json
 import os
 from typing import List, Dict, Optional
