@@ -47,8 +47,10 @@ class Storage:
 
     def list_runs(self) -> List[str]:
         """Lists all run files."""
+        # Find all JSON result files in directory
         # Simple glob to find json files
         files = glob.glob(os.path.join(self.results_dir, "*.json"))
+        # Return filenames sorted by newest first
         # Return just filenames, sorted by modification time (newest first)
         files.sort(key=os.path.getmtime, reverse=True)
         return [os.path.basename(f) for f in files]
