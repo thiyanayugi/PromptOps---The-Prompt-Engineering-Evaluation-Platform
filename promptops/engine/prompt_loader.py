@@ -16,6 +16,7 @@ class PromptLoader:
         
     def list_prompts(self) -> List[str]:
         """Returns a list of available prompt filenames."""
+        # Check if prompts directory exists before listing
         if not os.path.exists(self.prompts_dir):
             return []
         return [f for f in os.listdir(self.prompts_dir) if f.endswith(".json")]
