@@ -31,7 +31,8 @@ class PromptCompiler:
             compiled_user_message = f"Error: Missing variable {e} in dataset for template."
         except Exception as e:
             compiled_user_message = f"Error compiling prompt: {str(e)}"
-            
+        
+        # Return compiled prompt with system and user components
         return {
             "system_prompt": system_prompt,
             "user_message": compiled_user_message
