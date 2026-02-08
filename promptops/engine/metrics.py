@@ -29,7 +29,8 @@ class Metrics:
             total_clarity += evals.get("clarity_score", 0)
             total_words += evals.get("word_count", 0)
             total_latency += res.get("latency", 0)
-            
+        
+        # Compute and return averaged metrics
         return {
             "total_runs": total,
             "avg_clarity_score": round(total_clarity / total, 2),
