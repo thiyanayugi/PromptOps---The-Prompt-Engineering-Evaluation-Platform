@@ -1,3 +1,8 @@
+"""
+LLM-based judging module for PromptOps.
+
+Uses an LLM to evaluate generated outputs based on criteria.
+"""
 import json
 from ..llm.client import LLMClient
 
