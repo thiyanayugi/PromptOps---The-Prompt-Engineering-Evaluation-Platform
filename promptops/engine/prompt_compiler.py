@@ -1,3 +1,8 @@
+"""
+Prompt compilation module for PromptOps.
+
+Handles template variable substitution to generate final prompts.
+"""
 from typing import Dict, Any
 
 class PromptCompiler:
