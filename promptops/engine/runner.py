@@ -21,9 +21,11 @@ class Runner:
         """
         Runs a batch of inputs from a dataset against a prompt.
         """
+        # Generate unique run ID using ISO timestamp
         run_id = datetime.datetime.now().isoformat()
         results = []
         
+        # Process each test case in the dataset
         for case in dataset:
             # 1. Compile
             compiled = PromptCompiler.compile(prompt_version, case)
