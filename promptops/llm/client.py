@@ -20,8 +20,10 @@ class MockLLMClient(LLMClient):
     
     def generate(self, system_prompt: str, user_prompt: str, **kwargs) -> str:
         """Simulates an LLM response."""
+        # Simulate realistic API latency
         time.sleep(0.5) # Simulate latency
         
+        # Generate contextual responses based on prompts
         # Simple heuristic to return something relevant based on the user prompt
         # This is just for the demo to look somewhat realistic without an API key
         if "science" in system_prompt.lower() or "science" in user_prompt.lower():
