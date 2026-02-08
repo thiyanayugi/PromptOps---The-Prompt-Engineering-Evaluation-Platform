@@ -56,7 +56,8 @@ class Runner:
                 # We'll attach raw results first, then evaluator can run on them.
                 "evaluation": {} # Placeholder
             })
-            
+        
+        # Create comprehensive run summary with metadata
         run_summary = {
             "run_id": run_id,
             "timestamp": run_id,
