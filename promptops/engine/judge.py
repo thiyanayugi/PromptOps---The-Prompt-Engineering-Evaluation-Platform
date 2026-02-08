@@ -41,6 +41,7 @@ class Judge:
             # We need to simulate the JSON return if we use the mock.
             # Or we can just return a dummy score if parsing fails.
             
+            # Attempt to extract and parse JSON from response
             if "{" in response and "}" in response:
                 start = response.find("{")
                 end = response.rfind("}") + 1
