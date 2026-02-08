@@ -30,6 +30,7 @@ class Runner:
             # 1. Compile
             compiled = PromptCompiler.compile(prompt_version, case)
             
+            # Measure execution time for latency tracking
             # 2. Execute
             start_time = time.time()
             try:
