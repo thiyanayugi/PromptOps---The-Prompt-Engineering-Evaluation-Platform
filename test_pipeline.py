@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Test script to verify the PromptOps pipeline."""
+"""Test script to verify the PromptOps pipeline.
+
+This script performs end-to-end testing of all pipeline components.
+"""
 
 import json
 import sys
