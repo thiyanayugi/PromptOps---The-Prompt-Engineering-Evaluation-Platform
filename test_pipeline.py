@@ -47,6 +47,8 @@ def test_pipeline():
         print("   ❌ No prompts found!")
         return False
     
+    
+    # Load the first available prompt for testing
     prompt_data = prompt_loader.load_prompt(prompts[0])
     print(f"   ✅ Loaded prompt: {prompt_data.get('name')}\n")
     
