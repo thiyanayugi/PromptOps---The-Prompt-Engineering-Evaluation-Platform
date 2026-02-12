@@ -40,6 +40,7 @@ class Runner:
                     user_prompt=compiled["user_message"]
                 )
             except Exception as e:
+                # graceful error handling for LLM failures
                 output = f"Error generating response: {e}"
             end_time = time.time()
             latency = end_time - start_time
