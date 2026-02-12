@@ -28,6 +28,7 @@ class Runner:
         # Process each test case in the dataset
         for case in dataset:
             # 1. Compile
+            # Substitute variables into the prompt template
             compiled = PromptCompiler.compile(prompt_version, case)
             
             # Measure execution time for latency tracking
