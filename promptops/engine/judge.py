@@ -39,6 +39,7 @@ class Judge:
             # So let's handle the mock case gracefully or update the mock to be smarter? 
             # I'll implement a basic parser that looks for the JSON structure
             
+            # 3. Parse Response
             # For the mock client currently implemented, it returns simple strings. 
             # We need to simulate the JSON return if we use the mock.
             # Or we can just return a dummy score if parsing fails.
