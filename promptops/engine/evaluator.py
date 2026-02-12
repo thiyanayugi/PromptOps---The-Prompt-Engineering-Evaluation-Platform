@@ -10,6 +10,8 @@ from .judge import Judge
 class Evaluator:
     """Orchestrates evaluation of run results."""
     
+    
+    # Initialize with a judge instance for quality assessment
     def __init__(self, judge: Judge):
         self.judge = judge
         
