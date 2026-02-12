@@ -12,6 +12,7 @@ class PromptLoader:
     """Loads prompt versions from the filesystem."""
     
     def __init__(self, prompts_dir: str = "promptops/prompts"):
+        # Store the directory path for prompt files
         self.prompts_dir = prompts_dir
         
     def list_prompts(self) -> List[str]:
