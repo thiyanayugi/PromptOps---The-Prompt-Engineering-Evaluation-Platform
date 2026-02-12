@@ -9,6 +9,7 @@ import sys
 import os
 
 # Add project root to path
+# Ensure the project root is in the python path for module imports
 project_root = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, project_root)
 
