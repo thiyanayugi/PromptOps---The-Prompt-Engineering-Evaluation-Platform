@@ -10,6 +10,7 @@ class Judge:
     """Uses an LLM to evaluate outputs."""
     
     def __init__(self, llm_client: LLMClient):
+        # Store the LLM client for making evaluation calls
         self.llm_client = llm_client
         
     def evaluate(self, output: str, criteria: str = "clarity") -> float:
