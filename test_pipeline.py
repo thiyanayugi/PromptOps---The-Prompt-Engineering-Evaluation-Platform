@@ -43,6 +43,7 @@ def test_pipeline():
     print(f"   Found {len(prompts)} prompts: {prompts}")
     
     if not prompts:
+        # Exit if no prompts are available to test
         print("   ❌ No prompts found!")
         return False
     
