@@ -1,0 +1,49 @@
+{
+  "run_id": "2026-02-05T10:38:06.271386",
+  "timestamp": "2026-02-05T10:38:06.271386",
+  "prompt_version": "v1",
+  "prompt_name": "Simple Science Explainer",
+  "dataset_id": "science_topics.json",
+  "results": [
+    {
+      "case_id": "case1",
+      "input_variables": {
+        "id": "case1",
+        "topic": "gravity",
+        "age": 10,
+        "max_words": 60
+      },
+      "prompt_text": "Explain gravity to a 10 year old in under 60 words.",
+      "output": "Gravity is like an invisible glue that pulls everything towards the center of the Earth. It keeps us on the ground!",
+      "latency": 0.500110387802124,
+      "evaluation": {
+        "word_count": 21,
+        "clarity_score": 3,
+        "reasoning": "Judge returned non-JSON output (Mock fallback)"
+      }
+    },
+    {
+      "case_id": "case2",
+      "input_variables": {
+        "id": "case2",
+        "topic": "photosynthesis",
+        "age": 8,
+        "max_words": 50
+      },
+      "prompt_text": "Explain photosynthesis to a 8 year old in under 50 words.",
+      "output": "Photosynthesis is how plants eat sunlight to grow. They turn light and water into food!",
+      "latency": 0.5004591941833496,
+      "evaluation": {
+        "word_count": 15,
+        "clarity_score": 3,
+        "reasoning": "Judge returned non-JSON output (Mock fallback)"
+      }
+    }
+  ],
+  "metrics": {
+    "total_runs": 2,
+    "avg_clarity_score": 3.0,
+    "avg_latency_seconds": 0.5003,
+    "avg_word_count": 18.0
+  }
+}
