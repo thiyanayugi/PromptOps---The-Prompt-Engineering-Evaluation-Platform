@@ -70,4 +70,5 @@ class Runner:
             "metrics": {} # To be filled by evaluator
         }
         
+        # Return the complete run summary dictionary
         return run_summary
