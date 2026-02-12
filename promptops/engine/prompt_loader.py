@@ -23,7 +23,7 @@ class PromptLoader:
         
         # Use simple string matching for file extension
         # Filter to only include JSON files
-        return [f for f in os.path.listdir(self.prompts_dir) if f.endswith(".json")]
+        return [f for f in os.listdir(self.prompts_dir) if f.endswith(".json")]
 
     def load_prompt(self, filename: str) -> Optional[Dict]:
         """Loads a specific prompt file."""
