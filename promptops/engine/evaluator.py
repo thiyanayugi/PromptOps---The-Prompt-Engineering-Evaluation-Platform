@@ -20,6 +20,8 @@ class Evaluator:
         Takes a list of raw run results and adds evaluation scores.
         """
         evaluated_results = []
+        evaluated_results = []
+        # Iterate through each run result to apply evaluation metrics
         for result in run_results:
             output = result.get("output", "")
             
