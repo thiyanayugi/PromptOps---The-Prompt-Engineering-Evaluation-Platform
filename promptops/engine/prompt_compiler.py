@@ -32,6 +32,7 @@ class PromptCompiler:
             # Dataset row is missing a variable required by the template
             compiled_user_message = f"Error: Missing variable {e} in dataset for template."
         except Exception as e:
+            # Catch any other unexpected formatting errors
             compiled_user_message = f"Error compiling prompt: {str(e)}"
         
         # Return compiled prompt with system and user components
