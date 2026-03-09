@@ -22,6 +22,7 @@ class Storage:
         # Sanitize timestamp for safe filename
         timestamp = run_data.get("timestamp", "").replace(":", "-").replace(".", "-")
         filename = f"run_{timestamp}.json"
+        # Build full path for writing
         path = os.path.join(self.results_dir, filename)
         
         try:
