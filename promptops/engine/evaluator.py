@@ -44,4 +44,5 @@ class Evaluator:
             }
             evaluated_results.append(result)
             
+        # Return the fully evaluated list of results
         return evaluated_results
