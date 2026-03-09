@@ -20,6 +20,7 @@ class Metrics:
         if total == 0:
             return {}
             
+        # Accumulators for summing scores across results
         total_clarity = 0
         total_latency = 0
         total_words = 0
