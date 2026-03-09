@@ -37,6 +37,7 @@ class Storage:
     def load_run(self, filename: str) -> Optional[Dict]:
         """Loads a run result from a JSON file."""
         path = os.path.join(self.results_dir, filename)
+        # Return None early if file does not exist
         if not os.path.exists(path):
             return None
             
