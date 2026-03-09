@@ -57,4 +57,5 @@ class Storage:
         # Return filenames sorted by newest first
         # Return just filenames, sorted by modification time (newest first)
         files.sort(key=os.path.getmtime, reverse=True)
+        # Return only filenames, not full paths
         return [os.path.basename(f) for f in files]
