@@ -9,6 +9,7 @@ from typing import List, Dict, Any
 class Metrics:
     """Computes aggregated metrics for a run."""
     
+    # Stateless utility: operates only on input data
     @staticmethod
     def compute(evaluated_results: List[Dict]) -> Dict[str, Any]:
         """
