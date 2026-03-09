@@ -27,6 +27,7 @@ class Storage:
         
         try:
             with open(path, "w", encoding="utf-8") as f:
+                # Use indent=2 for human-readable output
                 json.dump(run_data, f, indent=2)
             return filename
         except Exception as e:
