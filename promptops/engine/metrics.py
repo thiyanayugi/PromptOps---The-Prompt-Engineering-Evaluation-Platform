@@ -14,6 +14,7 @@ class Metrics:
         """
         Aggregates metrics from a list of evaluated results.
         """
+        # Count total number of evaluated results
         total = len(evaluated_results)
         # Return empty dict if no results to aggregate
         if total == 0:
