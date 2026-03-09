@@ -45,6 +45,7 @@ class Storage:
             with open(path, "r", encoding="utf-8") as f:
                 return json.load(f)
         except Exception as e:
+            # Log and return None on any JSON decode or IO error
             print(f"Error loading run {filename}: {e}")
             return None
 
