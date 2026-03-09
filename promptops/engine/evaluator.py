@@ -19,10 +19,11 @@ class Evaluator:
         """
         Takes a list of raw run results and adds evaluation scores.
         """
-        evaluated_results = []
+        # Collect evaluated results to return
         evaluated_results = []
         # Iterate through each run result to apply evaluation metrics
         for result in run_results:
+            # Extract the generated text output for evaluation
             output = result.get("output", "")
             
             # Calculate basic word count metric
