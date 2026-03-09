@@ -51,6 +51,7 @@ class Judge:
                 end = response.rfind("}") + 1
                 json_str = response[start:end]
                 data = json.loads(json_str)
+                # Extract score and reasoning from parsed JSON
                 return data.get("score", 0), data.get("reasoning", "Parsed from judge output")
             else:
                 # Fallback for mock non-json responses or simple failure
