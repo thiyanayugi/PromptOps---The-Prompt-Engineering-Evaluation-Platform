@@ -34,4 +34,5 @@ class MockLLMClient(LLMClient):
             elif "photosynthesis" in user_prompt.lower():
                 return "Photosynthesis is how plants eat sunlight to grow. They turn light and water into food!"
             
+        # Default fallback for any unmatched prompts
         return f"Mock response to: {user_prompt[:20]}..."
