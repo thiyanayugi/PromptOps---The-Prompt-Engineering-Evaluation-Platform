@@ -42,6 +42,7 @@ class Evaluator:
                 "clarity_score": clarity_score,
                 "reasoning": reasoning
             }
+            # Append enriched result to output list
             evaluated_results.append(result)
             
         # Return the fully evaluated list of results
