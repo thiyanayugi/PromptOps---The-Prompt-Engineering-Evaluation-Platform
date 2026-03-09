@@ -58,4 +58,5 @@ class Judge:
                 return 3, "Judge returned non-JSON output (Mock fallback)"
                 
         except Exception as e:
+            # Return zero score on any unexpected error
             return 0, f"Judge error: {str(e)}"
