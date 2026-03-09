@@ -50,6 +50,7 @@ class Runner:
             # Collect run results for this test case
             # 3. Record Result
             results.append({
+                # Use "unknown" as fallback if case has no id field
                 "case_id": case.get("id", "unknown"),
                 "input_variables": case,
                 "prompt_text": compiled["user_message"],
