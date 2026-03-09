@@ -29,6 +29,7 @@ class PromptCompiler:
         try:
             compiled_user_message = user_template.format(**dataset_row)
         except KeyError as e:
+            # Dataset row is missing a variable required by the template
             compiled_user_message = f"Error: Missing variable {e} in dataset for template."
         except Exception as e:
             compiled_user_message = f"Error compiling prompt: {str(e)}"
