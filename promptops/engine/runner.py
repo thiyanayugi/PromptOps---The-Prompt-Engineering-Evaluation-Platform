@@ -45,6 +45,7 @@ class Runner:
                 # graceful error handling for LLM failures
                 output = f"Error generating response: {e}"
             end_time = time.time()
+            # Latency = wall-clock time elapsed during LLM call
             latency = end_time - start_time
             
             # Collect run results for this test case
