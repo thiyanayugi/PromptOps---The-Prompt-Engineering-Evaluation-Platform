@@ -15,6 +15,7 @@ class Runner:
     """Executes prompts against datasets."""
     
     def __init__(self, llm_client: LLMClient):
+        # Store the LLM client used for prompt execution
         self.llm_client = llm_client
         
     def run_batch(self, prompt_version: Dict, dataset: List[Dict], dataset_name: str) -> Dict[str, Any]:
