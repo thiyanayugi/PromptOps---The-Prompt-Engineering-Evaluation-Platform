@@ -13,6 +13,7 @@ class LLMClient(abc.ABC):
     @abc.abstractmethod
     def generate(self, system_prompt: str, user_prompt: str, **kwargs) -> str:
         """Generates a response from the LLM."""
+        # Subclasses must implement this method
         pass
 
 class MockLLMClient(LLMClient):
