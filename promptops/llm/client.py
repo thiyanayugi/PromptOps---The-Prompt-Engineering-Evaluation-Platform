@@ -21,6 +21,7 @@ class MockLLMClient(LLMClient):
     
     def generate(self, system_prompt: str, user_prompt: str, **kwargs) -> str:
         """Simulates an LLM response."""
+        # kwargs accepted for API compatibility but not used in mock
         # Simulate realistic API latency
         time.sleep(0.5) # Simulate latency
         
