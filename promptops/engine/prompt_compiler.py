@@ -8,6 +8,7 @@ from typing import Dict, Any
 class PromptCompiler:
     """Compiles prompts by substituting variables in templates."""
     
+    # Stateless utility: no class state needed
     @staticmethod
     def compile(prompt_template: Dict[str, Any], dataset_row: Dict[str, Any]) -> Dict[str, str]:
         """
