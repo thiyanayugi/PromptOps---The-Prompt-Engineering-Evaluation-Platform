@@ -33,6 +33,7 @@ class Judge:
         """
         
         try:
+            # Send evaluation prompt to the LLM
             response = self.llm_client.generate(system_prompt, user_prompt)
             # Naive parsing provided the mock returns strings, but in real life we'd need robust JSON parsing
             # For the mock, we might get a string back that isn't JSON if we stick to the mock logic exactly
