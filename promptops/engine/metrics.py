@@ -33,6 +33,7 @@ class Metrics:
             total_latency += res.get("latency", 0)
         
         # Compute and return averaged metrics
+        # Values are rounded for clean display
         return {
             "total_runs": total,
             "avg_clarity_score": round(total_clarity / total, 2),
