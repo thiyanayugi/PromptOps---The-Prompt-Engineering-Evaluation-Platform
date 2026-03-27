@@ -15,6 +15,7 @@ class Storage:
         self.results_dir = results_dir
         # Ensure results directory exists on initialization
         if not os.path.exists(self.results_dir):
+            # Create the results directory and any necessary parents
             os.makedirs(self.results_dir)
             
     def save_run(self, run_data: Dict) -> str:
