@@ -29,6 +29,7 @@ class Metrics:
         # Aggregate metrics across all results
         for res in evaluated_results:
             evals = res.get("evaluation", {})
+            # Sum up clarity score; default to 0 if missing
             total_clarity += evals.get("clarity_score", 0)
             total_words += evals.get("word_count", 0)
             total_latency += res.get("latency", 0)
