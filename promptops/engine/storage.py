@@ -27,6 +27,7 @@ class Storage:
         path = os.path.join(self.results_dir, filename)
         
         try:
+            # Force utf-8 encoding for cross-platform compatibility
             with open(path, "w", encoding="utf-8") as f:
                 # Use indent=2 for human-readable output
                 json.dump(run_data, f, indent=2)
