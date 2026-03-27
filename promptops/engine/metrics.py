@@ -18,6 +18,7 @@ class Metrics:
         # Count total number of evaluated results
         total = len(evaluated_results)
         # Return empty dict if no results to aggregate
+        # Prevents ZeroDivisionError later
         if total == 0:
             return {}
             
