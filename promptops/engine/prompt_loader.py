@@ -35,6 +35,7 @@ class PromptLoader:
             
         # Handle JSON parsing with error recovery
         try:
+            # Force utf-8 encoding to avoid Windows character issues
             with open(path, "r", encoding="utf-8") as f:
                 # Parse JSON string into Python dict
                 return json.load(f)
