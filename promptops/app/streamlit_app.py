@@ -21,6 +21,7 @@ st.set_page_config(
     # Set the browser tab title
     page_title="PromptOps",
     page_icon="🧠",
+    # Use full width of the screen instead of centered column
     layout="wide"
 )
 
