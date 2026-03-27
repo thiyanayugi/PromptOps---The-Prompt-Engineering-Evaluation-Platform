@@ -28,7 +28,7 @@ class Evaluator:
             
             # Calculate basic word count metric
             # 1. Rule-based checks
-            # Calculate simple word count metric
+            # Calculate simple word count metric (integer)
             word_count = len(output.split())
             
             # Invoke LLM judge for quality assessment
