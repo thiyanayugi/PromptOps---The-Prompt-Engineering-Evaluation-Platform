@@ -22,7 +22,7 @@ class Runner:
         """
         Runs a batch of inputs from a dataset against a prompt.
         """
-        # Generate unique run ID using ISO timestamp
+        # Generate unique run ID using ISO timestamp format
         run_id = datetime.datetime.now().isoformat()
         # Will hold all result dicts for each test case
         results = []
