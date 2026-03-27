@@ -36,6 +36,7 @@ class PromptLoader:
         # Handle JSON parsing with error recovery
         try:
             with open(path, "r", encoding="utf-8") as f:
+                # Parse JSON string into Python dict
                 return json.load(f)
         except Exception as e:
             print(f"Error loading prompt {filename}: {e}")
