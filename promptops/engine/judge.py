@@ -18,7 +18,7 @@ class Judge:
         Evaluates the output based on criteria. 
         Returns a score from 1-5.
         """
-        # Construct evaluation prompt for LLM judge
+        # Define the system prompt for the AI judge
         system_prompt = "You are an AI judge. You evaluate text based on specific criteria."
         user_prompt = f"""
         Evaluate the following text for {criteria} on a scale of 1 to 5.
