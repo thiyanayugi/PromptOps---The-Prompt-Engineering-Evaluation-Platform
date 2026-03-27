@@ -66,6 +66,7 @@ class Runner:
         # Create comprehensive run summary with metadata
         run_summary = {
             "run_id": run_id,
+            # Timestamp identical to run_id for now
             "timestamp": run_id,
             "prompt_version": prompt_version.get("version", "unknown"),
              "prompt_name": prompt_version.get("name", "unknown"),
