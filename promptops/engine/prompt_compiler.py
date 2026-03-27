@@ -22,6 +22,7 @@ class PromptCompiler:
             A dictionary with 'system_prompt' and compiled 'user_message'.
         """
         # Extract system and user templates from prompt definition
+        # Use .get() to avoid KeyError if system_prompt is missing
         system_prompt = prompt_template.get("system_prompt", "")
         user_template = prompt_template.get("user_template", "")
         
