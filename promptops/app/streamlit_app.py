@@ -18,6 +18,7 @@ from promptops.llm.client import MockLLMClient
 # Configure Streamlit page settings
 # Page config
 st.set_page_config(
+    # Set the browser tab title
     page_title="PromptOps",
     page_icon="🧠",
     layout="wide"
