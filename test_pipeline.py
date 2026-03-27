@@ -107,6 +107,7 @@ def test_pipeline() -> bool:
 if __name__ == "__main__":
     try:
         success = test_pipeline()
+        # Exit with 0 on success, 1 on failure
         sys.exit(0 if success else 1)
     except Exception as e:
         print(f"\n❌ Test failed with error: {e}")
