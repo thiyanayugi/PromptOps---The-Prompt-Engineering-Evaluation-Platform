@@ -33,6 +33,7 @@ class Evaluator:
             
             # Invoke LLM judge for quality assessment
             # 2. LLM Judge
+            # Expects a tuple of (score, reasoning_string) from judge
             clarity_score, reasoning = self.judge.evaluate(output, criteria="clarity")
             
             # Build evaluation results dictionary
