@@ -24,6 +24,7 @@ class PromptCompiler:
         # Extract system and user templates from prompt definition
         # Use .get() to avoid KeyError if system_prompt is missing
         system_prompt = prompt_template.get("system_prompt", "")
+        # Use .get() to avoid KeyError if user_template is missing
         user_template = prompt_template.get("user_template", "")
         
         # Use Python str.format() for template variable substitution
