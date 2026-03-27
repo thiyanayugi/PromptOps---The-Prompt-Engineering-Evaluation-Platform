@@ -22,7 +22,7 @@ from promptops.engine.metrics import Metrics
 from promptops.engine.storage import Storage
 from promptops.llm.client import MockLLMClient
 
-def test_pipeline():
+def test_pipeline() -> bool:
     """Test the complete pipeline end-to-end."""
     print("🧪 Testing PromptOps Pipeline...\n")
     
