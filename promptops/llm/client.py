@@ -6,6 +6,7 @@ Provides abstract interface for LLM interactions and a mock client for testing.
 import abc
 # For simulating latency in mock client
 import time
+# (unused currently, but available for future noisy mocks)
 import random
 
 class LLMClient(abc.ABC):
