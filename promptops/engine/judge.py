@@ -20,6 +20,7 @@ class Judge:
         """
         # Define the system prompt for the AI judge
         system_prompt = "You are an AI judge. You evaluate text based on specific criteria."
+        # Construct the user prompt with the text and evaluation criteria
         user_prompt = f"""
         Evaluate the following text for {criteria} on a scale of 1 to 5.
         
